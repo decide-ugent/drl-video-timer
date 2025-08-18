@@ -29,7 +29,7 @@ def plot_hidden_state(lstm_hidden, lstm_cell, high_z_indices, low_z_indices, top
     # plt.legend(handles=[line_all[0], line_least, line_top[0]])
     # plt.title("LSTM Hidden State Evolution Over Time")
     plt.xlabel("Time Step", fontsize=12)
-    plt.ylabel("Hidden State Value", fontsize=12)
+    plt.ylabel("Hidden State Activations", fontsize=12)
 
 
     plt.xticks(range(0, len(hidden_states_list)), fontsize=12)
@@ -62,7 +62,7 @@ def pca(squeezed_policy_layer, pca_components=3, total_timestep=20, save_path=No
 
     # plt.title("Principal component analysis (PCA) of LSTM Hidden States Over Time", fontsize=14)
     plt.xlabel("Time Step", fontsize=12)
-    # plt.ylabel("Principal Component Value", fontsize=12)
+    plt.ylabel("Principal Component Value", fontsize=12)
     plt.xticks(range(policy_layer_pc.shape[0]))
     plt.legend(loc='lower right', frameon=True, fontsize=10)
     plt.tight_layout()
