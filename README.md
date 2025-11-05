@@ -9,20 +9,6 @@ We found that oscillatory patterns, a motif commonly observed in biological syst
 
 You can read the full paper here: https://arxiv.org/pdf/2508.15784)
 
-## 📂 Repository Structure
-
-| Folder / File | Description                                                                                                                                                                                                                                                        |
-| **`envs/`** | Contains the custom reinforcement learning environments. Each environment sends one video frame per timestep to the agent. |
-| &nbsp;&nbsp;• `constant_frame_generation.py` | Repeats the same frame at each timestep. |
-| &nbsp;&nbsp;• `frame_generator.py` | Uses consecutive frames from a coherent video sequence. |
-| &nbsp;&nbsp;• `frame_generator_delayed.py` | Starts the interval timing task after a delay of *n* timesteps. |
-| &nbsp;&nbsp;• `random_frame_generator.py` | Generates random frames at each timestep by shuffling a coherent video sequence. |
-
-| **`train_agent.py`** | Main training script using a **CNN** for visual feature extraction, followed by an **LSTM**. Implements the `CnnLstmPolicy` policy of recurrent PPO from Stable Baselines3.                                                                                                                                                                                                       |
-| **`train_agent_lstm.py`** | Alternative training setup using an **MLP** instead of a CNN. Implements the `MlpLstmPolicy` policy of recurrent PPO from Stable Baselines3.                                                                                                                                                                                                      |
-| **`train_agent_delayed.py`** | Training script for the DRL agent on the **delayed interval timing task**. Can use CNN+LSTM or MLP+LSTM depending on the policy chosen. |
-| **`videos/`** | Folder containing video inputs used by the environments. Any video can be used.                                                                                                                                                                                    |
-                                                                                                                                                                                                                                   |
 ## Python Version
 
 This code is tested with **Python 3.10**
@@ -31,3 +17,19 @@ This code is tested with **Python 3.10**
 - Trains DRL agents to perform interval timing tasks using video input.
 - Multiple environment variants: delayed start, repeated frames, random frames.
 - Analysis of internal oscillatory mechanisms for different target durations.
+
+### envs/
+- `constant_frame_generation.py` — Repeats the same frame at each timestep.
+- `frame_generator.py` — Uses consecutive frames from a coherent video sequence.
+- `frame_generator_delayed.py` — Starts the interval timing task after a delay of *n* timesteps.
+- `random_frame_generator.py` — Generates random frames at each timestep by shuffling a coherent video sequence.
+
+### Training scripts
+- `train_agent.py` — Main training script using a **CNN** for visual feature extraction followed by an **LSTM**; uses `CnnLstmPolicy` (Recurrent PPO).
+- `train_agent_lstm.py` — Alternative training using an **MLP**; uses `MlpLstmPolicy` (Recurrent PPO).
+- `train_agent_delayed.py` — Training script for the **delayed interval timing task** (supports CNN+LSTM or MLP+LSTM).
+
+### Other
+- `videos/` — Folder containing video inputs used by the environments. Any video can be used. 
+
+
