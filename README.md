@@ -18,6 +18,7 @@ This code is tested with **Python 3.10**
 - Multiple environment variants: delayed start, repeated frames, random frames.
 - Analysis of internal oscillatory mechanisms for different target durations.
 
+## 📂 Repository Structure
 ### envs/
 - `constant_frame_generation.py` — Repeats the same frame at each timestep.
 - `frame_generator.py` — Uses consecutive frames from a coherent video sequence.
