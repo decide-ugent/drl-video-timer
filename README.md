@@ -26,10 +26,9 @@ This code is tested with **Python 3.10**
 - `random_frame_generator.py` — Generates random frames at each timestep by shuffling a coherent video sequence.
 
 ### Training scripts
-- `train_agent.py` — Main training script using a **CNN** for visual feature extraction followed by an **LSTM**; uses `CnnLstmPolicy` (Recurrent PPO).
-- `train_agent_lstm.py` — Alternative training using an **MLP**; uses `MlpLstmPolicy` (Recurrent PPO).
-- `train_agent_delayed.py` — Training script for the **delayed interval timing task** (supports CNN+LSTM or MLP+LSTM).
-
+- `train_agent.py` — Main training script using a **CNN** for visual feature extraction followed by an **LSTM**; uses `CnnLstmPolicy` in Recurrent PPO from stable baseline3.
+- `train_agent_lstm.py` — Alternative training using an **MLP**; uses `MlpLstmPolicy` in Recurrent PPO from stable baseline3.
+- `train_agent_delayed.py` — Training script for the **delayed interval timing task** 
 ### Other
 - `videos/` — Folder containing video inputs used by the environments. Any video can be used. 
 
