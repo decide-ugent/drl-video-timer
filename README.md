@@ -19,17 +19,19 @@ This code is tested with **Python 3.10**
 - Analysis of internal oscillatory mechanisms for different target durations.
 
 ## 📂 Repository Structure
-### envs/
+### rl_environments/
 - `constant_frame_generation.py` — Repeats the same frame at each timestep.
 - `frame_generator.py` — Uses consecutive frames from a coherent video sequence.
 - `frame_generator_delayed.py` — Starts the interval timing task after a delay of *n* timesteps.
 - `random_frame_generator.py` — Generates random frames at each timestep by shuffling a coherent video sequence.
-
+- 
 ### Training scripts
 - `train_agent.py` — Main training script using a **CNN** for visual feature extraction followed by an **LSTM**; uses `CnnLstmPolicy` in Recurrent PPO from stable baseline3.
 - `train_agent_lstm.py` — Alternative training using an **MLP**; uses `MlpLstmPolicy` in Recurrent PPO from stable baseline3.
 - `train_agent_delayed.py` — Training script for the **delayed interval timing task** 
-### Other
-- `videos/` — Folder containing video inputs used by the environments. Any video can be used. 
 
+### Other
+- `videos/` — Folder containing video inputs used by the environments. Any video can be used.
+- `utils/`  — Folder containing util functions to calculate and visualize layer level output, lstm hidden states, pca, fft and mafd (average frame difference)
+- `sb3model-wrappers` — Model wrappers to calculate layer level outputs
 

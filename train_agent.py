@@ -4,9 +4,9 @@
 
 from sb3_contrib import RecurrentPPO
 
-from envs.frame_generator import FrameGenerator
-from envs.constant_frame_generator import ConstantFrameGenerator
-from envs.random_frame_generator import RandomFrameGenerator
+from rl_environments.frame_generator import FrameGenerator
+from rl_environments.constant_frame_generator import ConstantFrameGenerator
+from rl_environments.random_frame_generator import RandomFrameGenerator
 
 # -------------------------------------------------------------------------
 # Environment and training configuration

@@ -1,12 +1,13 @@
 
-# mean changes in video
+# This code calcutaes the mean changes in video
+
 import cv2
 from sb3_contrib import RecurrentPPO
 from stable_baselines3 import PPO
 from stable_baselines3.common.evaluation import evaluate_policy
 
-from envs.frame_generator import FrameGenerator
-from envs.random_frame_generator import RandomFrameGenerator
+from rl_environments.frame_generator import FrameGenerator
+from rl_environments.random_frame_generator import RandomFrameGenerator
 import numpy as np
 
 def compute_average_frame_difference(frames):
@@ -29,11 +30,7 @@ def compute_average_frame_difference(frames):
         # diff = cv2.absdiff(prev_frame_gray, curr_frame_gray)
         abs_diff = np.abs(curr_frame_gray.astype(np.float32) - prev_frame_gray.astype(np.float32))
         # mean_diff = np.mean(diff)
-
-
-
         # f_k(i,j) - f_{k-1}(i,j)
-
 
         # M and N: width and height of the frame
         M, N = curr_frame_gray.shape

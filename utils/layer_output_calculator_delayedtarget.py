@@ -1,6 +1,6 @@
 from sb3_contrib import RecurrentPPO
 
-from envs.frame_generator import FrameGenerator
+from rl_environments.frame_generator import FrameGenerator
 import torch as t
 
 from sb3model_wrappers.recurrentppo_wrapper import sb3Wrapper

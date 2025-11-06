@@ -4,8 +4,8 @@
 
 from sb3_contrib import RecurrentPPO
 
-from envs import frame_generator, constant_frame_generator, random_frame_generator
-from envs.frame_generator_delayed import FrameGeneratorDelayed
+from rl_environments import frame_generator, constant_frame_generator, random_frame_generator
+from rl_environments.frame_generator_delayed import FrameGeneratorDelayed
 
 # train constant frame
 TRAIN_VIDEO_PATH = "videos/V1-0001_City Scene Layout 1 setting0001.mp4"
