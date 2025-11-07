@@ -1,13 +1,13 @@
 # Deep Reinforcement Learning (DRL) video timer
 This repository contains code to reproduce the results and analysis presented in the paper, **"Emergent time-keeping mechanisms in a deep reinforcement learning agent performing an interval timing task"**.
 
-
+You can read the full paper here: https://arxiv.org/pdf/2508.15784
 
 ## Paper Overview
 This paper investigates the emergent time-keeping mechanisms used by a deep reinforcement learning (DRL) agent while performing an interval timing task using visual inputs. 
 We found that oscillatory patterns, a motif commonly observed in biological systems, can emerge as a time-keeping mechanism in artificial agents trained solely on an interval timing task. This study aims to initiate discussions about the similarities in time-keeping mechanisms that develop in artificial and biological systems through interactions with their environment.
 
-You can read the full paper here: https://arxiv.org/pdf/2508.15784)
+
 
 ## Python Version
 
